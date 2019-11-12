@@ -1,0 +1,9 @@
+api_controllers:  # load api routes first
+    resource: ../../src/Controller/api/
+    type: annotation
+controllers:
+    resource: ../../src/Controller/
+    type: annotation
+vue_controller: # load our routes later
+    resource: ../../src/Controller/DefaultController.php
+    type: annotation
