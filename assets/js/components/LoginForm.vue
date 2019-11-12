@@ -8,15 +8,15 @@
 			            <form class="form-signin">
 			            	{{welcomeMsg}}
 			              	<div class="form-label-group">
-			                	<input type="email" id="inputEmail" class="form-control mb-3" placeholder="Email address" required autofocus>
+			                	<input id="inputEmail" type="email" class="form-control mb-3" placeholder="Email address" required autofocus>
 			              	</div>
 
 			              	<div class="form-label-group">
-			                	<input type="password" id="inputPassword" class="form-control mb-4" placeholder="Password" required>
+			                	<input id="inputPassword" type="password" class="form-control mb-4" placeholder="Password" required>
 			              	</div>
 
 			              	<div class="custom-control custom-checkbox mb-3">
-			                	<input type="checkbox" class="custom-control-input" id="customCheck1">
+			                	<input id="customCheck1" type="checkbox" class="custom-control-input">
 			                	<label class="custom-control-label" for="customCheck1">Remember password</label>
 			              	</div>
 
