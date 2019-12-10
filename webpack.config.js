@@ -1,5 +1,6 @@
 var Encore = require('@symfony/webpack-encore');
 var dotenv = require('dotenv');
+var path = require('path')
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -93,8 +94,23 @@ Encore
             throw env.error;
         }
 
-        options['process.env'].VUE_APP_BASE_URL = JSON.stringify("http://localhost:8004/api/v1");
+        options['process.env'].VUE_APP_BASE_URL = JSON.stringify("http://localhost:8000/api/v1");
     })
 ;
 
-module.exports = Encore.getWebpackConfig();
+let config = Encore.getWebpackConfig();
+
+config.resolve.alias = {
+    'vue$': 'vue/dist/vue.esm.js',
+    '@': path.resolve(__dirname, 'assets/js'),
+    '@components': path.resolve(__dirname, 'assets/js/components'),
+    '@assets': path.resolve(__dirname, 'assets/js/assets'),
+    '@router': path.resolve(__dirname, 'assets/js/router'),
+    '@services': path.resolve(__dirname, 'assets/js/services'),
+    '@store': path.resolve(__dirname, 'assets/js/store'),
+    '@views': path.resolve(__dirname, 'assets/js/views')
+};
+
+config.resolve.extensions = ['*', '.js', '.vue', '.json']
+
+module.exports = config;

@@ -7,8 +7,8 @@
 import Vue from 'vue';
 import "jquery";
 import "bootstrap";
-import store from "./store/store";
-import router from './router/routes.js';
+import store from "@store/store";
+import router from '@router/routes';
 import App from "./App.vue"; 
   
 

@@ -6,6 +6,7 @@
           			<div class="card-body">
             			<h5 class="card-title text-center">Sign In</h5>
 			            <form class="form-signin">
+			            	<img src="@assets/images/logo.png" width="50px">
 			            	{{welcomeMsg}}
 			              	<div class="form-label-group">
 			                	<input id="inputEmail" type="email" class="form-control mb-3" placeholder="Email address" required autofocus>
@@ -32,7 +33,7 @@
   	</div>
 </template>
 <script>
-import authApi from '../services/api/authApi';
+import authApi from '@services/api/authApi';
 
 export default {
 	name: 'LoginForm',
