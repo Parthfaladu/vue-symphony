@@ -89,12 +89,12 @@ Encore
 
     .configureDefinePlugin(options => {
         const env = dotenv.config();
-
+        
         if (env.error) {
             throw env.error;
         }
 
-        options['process.env'].VUE_APP_BASE_URL = JSON.stringify("http://localhost:8000/api/v1");
+        options['process.env'].VUE_APP_BASE_URL = JSON.stringify(env.parsed.BACKEND_URL);
     })
 ;
 
