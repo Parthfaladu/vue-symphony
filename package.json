@@ -33,7 +33,7 @@
         "eslint-plugin-promise": "^4.2.1",
         "eslint-plugin-standard": "^4.0.1",
         "jquery": "^3.4.1",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.21",
         "popper.js": "^1.16.0",
         "store": "^2.0.12",
         "vue-router": "^3.1.3",
